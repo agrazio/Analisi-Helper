@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AnalisiHelper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page">
+
+        <div data-role="header">
+            <h1>Analisi Helper</h1>
+        </div>
+        <!-- /header -->		
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true">
+				<li><a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a></li>
+                <li><a href="#pns">Proibito non sapere</a></li>
+                <li><a href="#teor">Teoria</a></li>
+				<li><a href="data/funz.html" rel="external">Studio funzioni</a></li>
+				<li><a href="#ser">Serie</a></li>
+                <li><a href="data/lim.html" rel="external">Limiti</a></li>
+                <li><a href="data/der.html" rel="external">Derivate</a></li>
+                <li><a href="data/int.html" rel="external">Integrali</a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+    </div>
+    <!-- /page -->
+
+    <!-- PROIBITO NON SAPERE -->
+    <div data-role="page" id="pns">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Proibito non sapere</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+
+            <p>
+                <b>Funzione derivabile e derivate</b>
+                <br/> La funzione f, definita in un intorno x0&#8712R, si dice derivabile in x0 se esiste finito
+                <br/>lim<sub>x &rarr; x0</sub> (f(x)-f(x0)) / (x - x0 )
+                <br/> Se esiste, tale limite si chiama derivata di f in x0 e si indica con f'(x0).
+            </p>
+
+            <p>
+                <b>Teorema fondamentale del Calcolo</b>
+                <br/> Sia f una funzione integrabile su [a,b] e sia x0&#8712[a,b]. Allora la funzione F(x)=&int;<sub>x0 to x</sub> f(x) dt è continua su [a,b].
+                <br/> Se f è continua su [a,b] allora F è derivabile su [a,b] e F'(x)=f(x) &forall; x &isin; [a,b].
+                <br/> Se f è continua su [a,b] e G è una qualunque primitiva di f, allora &int;<sub>a to b</sub> f(x)dx=G(b)-G(a).
+            </p>
+
+            <p>
+                <b>Limite per le successioni</b>
+                <br/> La successione a<sub>n</sub> ha per limite e converge ad l se per ogni &epsilon;>0 esiste un indice n<sub>e</sub> | &forall;n>=ne si ha |l-a<sub>n</sub>|
+                < &epsilon; Cioè tutti i termini della successione di indice>= a n<sub>e</sub> si trovano nell'intorno di raggio &epsilon; di l. Si dice che la successione a<sub>n</sub> diverge a +&infin; se &forall; M esiste un indice n<sub>M</sub> | &forall;n>=n<sub>M</sub> si ha a<sub>n</sub>>M.
+            </p>
+
+            <p>
+                <b>Serie convergente</b> La serie &sum;<sub>k=0 to &infin;</sub> si dice convergente la successione delle sue somme parziali S<sub>n</sub>=&sum;<sub>k=0 to n</sub> a<sub>k</sub> è convergente.
+                <br/> In tal caso S = lim S<sub>n</sub> è la somma della serie.
+        </div>
+    </div>
+
+    <!-- TEORIA -->
+    <div data-role="page" id="teor">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Teoria</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#t1">Rolle</a></li>
+                    <li><a href="#t2">Lagrange</a></li>
+                    <li><a href="#t3">Cauchy</a></li>
+                    <li><a href="#t4">De L'Hopital</a></li>
+                    <li><a href="#t5">Degli zeri</a></li>
+                    <li><a href="#t6">Unicità del limite</a></li>
+                    <li><a href="#t7">Fermat</a></li>
+                    <li><a href="#t8">Media integrale</a></li>
+                    <li><a href="#t9">CN Cauchy (convergenza serie)</a></li>
+                    <li><a href="#t10">Esistenza limite successioni monotone</a></li>
+                    <li><a href="#t11">Permanenza del segno</a></li>
+					<li><a href="#t12">Weierstrass</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="t1">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Rolle</h1>
+        </div>
+        <div role="main" class="ui-content">
+            Sia f:[a,b] -> R, se:
+            <br/> f è continua in [a,b]
+            <br/> f è derivabile in (a,b)
+            <br/> f(a)=f(b)
+            <br/> ALLORA esiste almeno un punto stazionario &rarr; c &isin; (a,b) | f'(c)=0
+        </div>
+    </div>
+	<div data-role="page" id="t2">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Lagrange</h1>
+        </div>
+        <div role="main" class="ui-content">
+            f continua in [a,b] e derivabile in (a,b)</br>
+			&rarr; &exist; almeno un punto c &isin; (a,b) | (f(b)-f(a)) / (b-a) = f'(c) <br/>
+			f'(c) è il coeff. angolare della retta parallela alla retta AB passante per c.<br/>
+			La retta AB è la retta che congiunge gli estremi di f.
+        </div>
+    </div>
+	<div data-role="page" id="t3">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Cauchy</h1>
+        </div>
+        <div role="main" class="ui-content">
+            Siano d,g:[a,b] &rarr; R due funzioni reali continue in [a,b] e derivabili in (a,b).<br/>
+			Allora esiste un punto c &isin; (a,b) tale che<br/>
+			[g(b)-g(a)]f'(c) = [f(b)-f(a)]g'(c) e quindi<br/><br/>
+			f'(c)/g'(c) = (f(b)-f(a)) / (g(b)-g(a))
+        </div>
+    </div>
+	<div data-role="page" id="t4">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>De L'Hopital</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Siano d,g:[a,b] &rarr; R con - &infin; &le; a &le; b &le; &infin;
+		   1) Se f e g sono derivabili in (a,b) con f'(x) e g'(x) != 0 &forall; x &isin; (a,b)<br/>
+		   2) Se f e g sono entrambe &infin;initesime o &infin;inite per x &rarr; a<sup>+</sup>, cioè forma di indecisione 0/0 o &infin;/&infin;<br/>
+		   3) Se &exist; lim<sub>x &rarr; a<sup>+</sup></sub> f'(x) / g'(x) = L &isin; R<br/></br>
+		   &rArr; lim<sub>x &rarr; a<sup>+</sup></sub> f(x) / g(x) e vale lim<sub>x &rarr; a<sup>+</sup></sub> f'(x) / g'(x) = L
+        </div>
+    </div>
+	<div data-role="page" id="t5">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Degli zeri</h1>
+        </div>
+        <div role="main" class="ui-content">
+            f continua in [a,b] e f(a)*f(b) &lt; 0<br/>
+			allora esiste almeno un punto c &isin; (a,b) | f(c)=0 // la funzione assume 0<br/>
+			Se f è strettamente monotona lo zero è unico			
+        </div>
+    </div>
+	<div data-role="page" id="t6">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Unicità del limite</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Se la successione ha limite, esso è unico.<br/>
+			lim<sub>n&rarr;&infin;</sub> an = l
+        </div>
+    </div>
+	<div data-role="page" id="t7">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Fermat</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Sia f: I &sube; R &rarr; R , I intervallo e sia x0 un punto interno ad I, cioè esiste U (x0) &sube; I<br/>
+		   Se x0 è massimo o minimo relativo di f e f è derivabile in x0, allora f'(x0)=0 cioè x0 è un punto stazionario.
+        </div>
+    </div>
+	<div data-role="page" id="t8">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Fermat</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Se f è continua in [a,b], allora esiste almeno un punto c &isin; [a,b] | (1/(b-a)) &int;<sub>a b</sub>f(x)dx=f(c)<br/>
+		   &rArr; &int;<sub>a b</sub>f(x)dx = (b-a)f(c)
+        </div>
+    </div>
+	<div data-role="page" id="t9">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>C.N. di Cauchy (convergenza serie)</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Se la serie &sum;<sub>n=0 to k</sub> converge, allora lim<sub>n&rarr;&infin;</sub> a<sub>n</sub> converge
+        </div>
+    </div>
+	<div data-role="page" id="t10">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Esistenza del limite per successioni</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Una successione monotona di numeri reali converge sempre a un limite e tale limite è finito se e solo se la successione è limitata
+        </div>
+    </div>
+	<div data-role="page" id="t11">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Permanenza del segno</h1>
+        </div>
+        <div role="main" class="ui-content">
+           lim<sub>n&rarr;+&infin;</sub> a<sub>n</sub> = l<br/>
+		   l &gt; 0 &rArr; a<sub>n</sub> definitivamente &gt; 0<br/>
+		   l &lt; 0 &rArr; a<sub>n</sub> definitivamente &lt; 0
+        </div>
+    </div>
+	<div data-role="page" id="t12">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Weierstrass del segno</h1>
+        </div>
+        <div role="main" class="ui-content">
+           Sia [a,b] in R non vuoto e sia f : [a,b] continua in R.<br/>
+		   Allota f(x) ammette (almeno) un punto di massimo assoluto e un punto di minimo assoluto in [a,b].
+        </div>
+    </div>
+
+
+		<!-- SERIE -->
+		<div data-role="page" id="ser">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Serie</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+		<ul data-role="listview" data-inset="true">
+				<li><a href="#critS">Criteri</a></li>
+		</ul>
+		 <h4>Geometrica</h4>
+		 &sum;<sub>(n=0 to &infin;)</sub> q<sup>n</sup><br/>
+		 -1 &lt; q &lt; 1 converge con somma 1/(1-q)<br/>
+		 q &ge; 1 diverge<br/>
+		 q &le; -1 irregolare
+		 
+		 <h4>Mengoli</h4>
+		  &sum;<sub>(n=0 to &infin;)</sub> 1/(n(n-1)) = 1<br/>
+		  Somma: 1-(1/(n+1))<br/>
+		  (È come una serie telescopia)
+		  
+		  <h4>Armonica generalizzata</h4>
+		  &sum;<sub>(n=0 to &infin;)</sub> 1/n<sup>a</sup><br/>
+		  a &le; 1 diverge</br>
+		  a &gt; 1 converge
+		</div>
+		</div>
+			<div data-role="page" id="critS">
+        <div data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Indietro</a>
+            <h1>Criteri</h1>
+        </div>
+        <div role="main" class="ui-content">
+			<h4>Confronto</h4>
+			Date le serie an, bn con an &le; bn definitivamente si ha:<br/>
+			- bn converge &rarr; an converge<br/>
+			- an diverge &rarr; an diverge
+			<h4>Radice</h4>
+			an serie a termini non negativi<br/>
+			lim<sub>n&rarr;&infin;</sub> <sup>n</sup>&radic; an = l<br/>
+			0&lt;l&lt;1 an converge<br/>
+			l&gt;1 an diverge<br/>
+			l=1 nulla
+			<h4>Rapporto</h4>
+			lim<sub>n&rarr;&infin;</sub> (a<sub>n+1</sub>)/an<br/>
+			0&lt;l&lt;1 an converge<br/>
+			l&gt;1 an diverge<br/>
+			l=1 nulla
+			<h4>Assolutamente convergente</h4>
+			an è assolutamente convergente se |an| converge
+			<h4>Leibniz</h4>
+			&sum;<sub>0 to &infin;</sub> (-1)<sup>&infin;</sup> * an an &ge; 0 &forall; n<br/>
+			&rArr; serie di termine a segno alterno
+        </div>
+    </div>
+	</body>
+</html>
